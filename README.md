@@ -19,15 +19,13 @@ ObjectMapper is a framework written in Swift that makes it easy for you to conve
 
 https://github.com/Hearst-DD/ObjectMapper
 
-
-## Mapper
+## Mapper
 
 Mapper is a simple Swift library to convert JSON to strongly typed objects. One advantage to Mapper over some other libraries is you can have immutable properties
 
 https://github.com/lyft/mapper
 
-
-## SwiftyJSON
+## SwiftyJSON
 
 Perhaps the most used parser for Swift, and it's a little more verbose than the above ones.
 
