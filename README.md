@@ -43,14 +43,16 @@ https://github.com/utahiosmac/Marshal
 
 This library looks promising, uses Node on top of ... it?
 
-Genome is built on top of Node as opposed to JSON directly. This makes it easy for Genome to work with any data type through little effort.
+> Genome is built on top of Node as opposed to JSON directly. This makes it easy for Genome to work with any data type through little effort.
 
-All mapping operations are built as sugar on top of Node's core.
+> All mapping operations are built as sugar on top of Node's core.
 
 https://github.com/LoganWright/Genome
 
 
 
 ## Decodable
+
+> Simple and strict, yet powerful object mapping made possible by Swift 2's error handling. Greatly inspired by Argo, but without a bizillion functional operators.
 
 https://github.com/Anviking/Decodable
