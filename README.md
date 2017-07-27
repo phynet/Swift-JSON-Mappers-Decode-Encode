@@ -1,4 +1,4 @@
-# Swift-JSON-Mappers
+# Swift-JSON-Mappers-Decode-Encode
 This is a collection of resources of different frameworks and libraries used to map (decode-encode-serialize) JSON's in Swift. I'm coping all descriptions from their original source.
 
 ## Unbox
