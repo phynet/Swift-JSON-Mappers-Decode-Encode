@@ -10,35 +10,44 @@ Example taken from his repo:
 
 A JSON data:
 
+```Swift
     {
         "name": "John",
         "age": 27
     }
+```
 
 Which can be represented as:
 
+```Swift
     struct User {
         let name: String
         let age: Int
     }
+```
 
 Apply to each property the Unboxable attribute 
 
+```Swift
     extension User: Unboxable {
         init(unboxer: Unboxer) throws {
             self.name = try unboxer.unbox(key: "name")
             self.age = try unboxer.unbox(key: "age")
         }
     }
+```
 
 An later (decode) use as:
 
+```Swift
     let user: User = try unbox(dictionary: dictionary)
+```
 
 Or 
 
+```Swift
     let user: User = try unbox(data: data)
-
+```
 
 https://github.com/JohnSundell/Unbox
 
@@ -98,20 +107,26 @@ https://github.com/JohnSundell/Wrap
 
 Example copied from the repo:
 
+```Swift
     struct User {
         let name: String
         let age: Int
     }
 
     let user = User(name: "John", age: 28)
+```
 
 Using wrap() you can now encode a User instance with one command:
 
-    let dictionary: [String : Any] = try wrap(user)
+```Swift
+     let dictionary: [String : Any] = try wrap(user)
+```
 
 Which will produce the following Dictionary:
 
+```Swift
     {
         "name": "John",
         "age": 28
     }
+```
