@@ -3,14 +3,46 @@ This is a collection of resources of different frameworks and libraries used to 
 
 ## Unbox
 
-Unbox is an easy to use Swift JSON decoder. Don't spend hours writing JSON decoding code - just unbox it instead!
-Is lightweight, non-magical and doesn't require you to subclass, make your JSON conform to a specific schema or completely change the way you write model code. It can be used on any model with ease.
+From John Sundell as well, **Unbox** is an easy to use Swift JSON decoder (you can find the encoder above). 
+Just make your JSON conform to a specific schema or completely change the way you write model code. It can be used on any model with ease.
+
+Example taken from his repo:
+
+A JSON data:
+
+    {
+        "name": "John",
+        "age": 27
+    }
+
+Which can be represented as:
+
+    struct User {
+        let name: String
+        let age: Int
+    }
+
+Apply to each property the Unboxable attribute 
+
+    extension User: Unboxable {
+        init(unboxer: Unboxer) throws {
+            self.name = try unboxer.unbox(key: "name")
+            self.age = try unboxer.unbox(key: "age")
+        }
+    }
+
+An later (decode) use as:
+
+    let user: User = try unbox(dictionary: dictionary)
+
+Or 
+
+    let user: User = try unbox(data: data)
+
 
 https://github.com/JohnSundell/Unbox
 
-And a extension to use unbox with Alamo Fire
-
-https://github.com/serejahh/UnboxedAlamofire
+And a extension to use unbox with Alamo Fire: https://github.com/serejahh/UnboxedAlamofire
 
 ## Object Mapper
 
