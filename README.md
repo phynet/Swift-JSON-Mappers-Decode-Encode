@@ -56,3 +56,30 @@ https://github.com/LoganWright/Genome
 > Simple and strict, yet powerful object mapping made possible by Swift 2's error handling. Greatly inspired by Argo, but without a bizillion functional operators.
 
 https://github.com/Anviking/Decodable
+
+## Wrap
+
+This repo from John Sundell helps you to encode JSON your structs or classes. 
+
+https://github.com/JohnSundell/Wrap
+
+
+Example copied from the repo:
+
+    struct User {
+        let name: String
+        let age: Int
+    }
+
+    let user = User(name: "John", age: 28)
+
+Using wrap() you can now encode a User instance with one command:
+
+    let dictionary: [String : Any] = try wrap(user)
+
+Which will produce the following Dictionary:
+
+    {
+        "name": "John",
+        "age": 28
+    }
