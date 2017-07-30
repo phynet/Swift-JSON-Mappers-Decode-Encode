@@ -180,7 +180,7 @@ Which will produce the following Dictionary:
             53000,
             53001
         ]
-}
+ }
 ```
 
 ```swift
