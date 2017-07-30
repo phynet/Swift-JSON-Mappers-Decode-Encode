@@ -132,3 +132,74 @@ Which will produce the following Dictionary:
         "age": 28
     }
 ```
+
+
+## Serpent
+
+[Serpent](https://engineering.nodesagency.com/articles/iOS/Serpent-more-than-just-another-JSON-mapping-framework/)
+ It's a JSON mapper that generates all the parser code from the property models in your app and viceversa.  Seems fast and efficent. But you must download also the [Model Builder](https://github.com/nodes-ios/ModelBoiler)
+
+![Parsing](https://d1gwekl0pol55k.cloudfront.net/image/nstack/translate_values/modelboiler_QFktJAlXOv.gif)
+
+
+## Freddy 
+
+[Freddy](https://github.com/bignerdranch/Freddy) is yet another Framework to parse JSON created by **Big Nerd Ranch**. It has some benefits like:
+
+- Type Safty: "...provides a type safe solution to parsing JSON in Swift. This means that the compiler helps you work with sending and receiving JSON in a way that helps to prevent runtime crashes."
+- Idiomatic Solution: "...Takes advantage of Swift's generics, enumerations, and functional features."
+- Error Information: "for mistakes that commonly occur while parsing JSON. If you subscript the JSON object with a key that is not present, you get an informative error. If your desired index is out of bounds, you get an informative error. If you try to convert a JSON value to the wrong type, you get a good error here too."
+- WIKI: Really important when using a library, or framework because you need information on how to use them. [wiki](https://github.com/bignerdranch/Freddy/wiki)
+
+```json 
+{
+    "success": true,
+    "people": [
+        {
+            "name": "Matt Mathias",
+            "age": 32,
+            "spouse": true
+        },
+        {
+            "name": "Sergeant Pepper",
+            "age": 25,
+            "spouse": false
+        }
+    ],
+    "jobs": [
+        "teacher",
+        "judge"
+    ],
+    "states": {
+        "Georgia": [
+            30301,
+            30302,
+            30303
+        ],
+        "Wisconsin": [
+            53000,
+            53001
+        ]
+    }
+```
+
+```swift
+let data = getSomeData()
+do {
+    let json = try JSON(data: data)
+    let success = try json.getBool(at: "success")
+    // do something with `success`
+} catch {
+    // do something with the error
+}
+```
+
+```swift
+let data = getSomeData()
+do {
+    let json = try JSON(data: data)
+    let georgiaZipCodes = try json.getArray(at: "states","Georgia")
+    let firstPersonName = try json.getString(at: "people",0,"name")
+} catch {
+    // do something with the error
+}```
