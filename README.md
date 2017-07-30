@@ -149,7 +149,7 @@ Which will produce the following Dictionary:
 - Type Safty: "...provides a type safe solution to parsing JSON in Swift. This means that the compiler helps you work with sending and receiving JSON in a way that helps to prevent runtime crashes."
 - Idiomatic Solution: "...Takes advantage of Swift's generics, enumerations, and functional features."
 - Error Information: "for mistakes that commonly occur while parsing JSON. If you subscript the JSON object with a key that is not present, you get an informative error. If your desired index is out of bounds, you get an informative error. If you try to convert a JSON value to the wrong type, you get a good error here too."
-- WIKI: Really important when using a library, or framework because you need information on how to use them. [wiki](https://github.com/bignerdranch/Freddy/wiki)
+- [Wiki](https://github.com/bignerdranch/Freddy/wiki): Really important when using a library, or framework because you need information on how to use them. 
 
 ```json 
 {
