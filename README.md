@@ -6,6 +6,8 @@ This is a collection of resources of different frameworks and libraries used to 
 From John Sundell as well, **Unbox** is an easy to use Swift JSON decoder (you can find the encoder above). 
 Just make your JSON conform to a specific schema or completely change the way you write model code. It can be used on any model with ease.
 
+Last version update: Unbox 2.5.0 (06/06/217)
+
 https://github.com/JohnSundell/Unbox
 
 Example taken from his repo:
